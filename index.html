@@ -7,12 +7,30 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <script src="https://kit.fontawesome.com/beaa09218d.js"></script>
   <title>Chats | Kakao Clone</title>
+  <script>
+    function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+
+      m = checkTime(m);
+
+      document.getElementById("clock").innerHTML = h + ":" + m;
+      var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+      if (i < 10) {
+        i = "0" + i;
+      } // ¼ýÀÚ°¡ 10º¸´Ù ÀÛÀ» °æ¿ì ¾Õ¿¡ 0À» ºÙ¿©ÁÜ
+      return i;
+    }
+  </script>
 </head>
 
-<body>
+<body onload="startTime()">
   <div class="status-bar">
     <div class="status-bar__column">
-      <span class="status-bar__clock">
+      <dic id="clock" class="status-bar__clock">
         13:54
       </span>
     </div>
@@ -41,17 +59,17 @@
       </span>
     </div>
   </header>
-  <!-- div íƒœê·¸ëŠ” í•˜ë‚˜ì”© í‘œí˜„ë  ë•Œë§ˆë‹¤ ì¤„ ë°”ê¿ˆì´ ì¼ì–´ë‚¨
-         span íƒœê·¸ëŠ” ì˜†ìœ¼ë¡œ ë°°ì—´ë¨ -->
+  <!-- div ?ƒœê·¸ëŠ” ?•˜?‚˜?”© ?‘œ?˜„?  ?•Œë§ˆë‹¤ ì¤? ë°”ê¿ˆ?´ ?¼?–´?‚¨
+         span ?ƒœê·¸ëŠ” ?˜†?œ¼ë¡? ë°°ì—´?¨ -->
   <main class="chats">
-    <!-- ë””ìžì¸ ì¸¡ë©´ì—ì„œì˜ main íƒœê·¸-->
+    <!-- ?””?ž?¸ ì¸¡ë©´?—?„œ?˜ main ?ƒœê·?-->
     <ul class="chats__list">
-      <!-- listë¥¼ ë§Œë“¦-->
+      <!-- listë¥? ë§Œë“¦-->
       <li class="chats__chat chat">
-        <!-- listì˜ ì±„íŒ…ëª©ë¡ 1ê°œ-->
+        <!-- list?˜ ì±„íŒ…ëª©ë¡ 1ê°?-->
         <a href="chat.html">
           <div class="chat__column">
-            <!-- avatarì™€ ì´ë¦„, ë‚´ìš© í‘œì‹œ-->
+            <!-- avatar??? ?´ë¦?, ?‚´?š© ?‘œ?‹œ-->
             <img class="chat__avatar g-avatar" src="image/avatar.jpg">
             <div class="chat__content">
               <span class="chat__username">
@@ -63,7 +81,7 @@
             </div>
           </div>
           <div class="chat__column">
-            <!-- ì§€ë‚œ ë‚ ì§œ í‘œì‹œ-->
+            <!-- ì§??‚œ ?‚ ì§? ?‘œ?‹œ-->
             <span class="chat_timestamp">Yesterday</span>
           </div>
         </a>
