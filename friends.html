@@ -20,20 +20,20 @@
       function checkTime(i) {
         if (i < 10) {
           i = "0" + i;
-        } // ¼ýÀÚ°¡ 10º¸´Ù ÀÛÀ» °æ¿ì ¾Õ¿¡ 0À» ºÙ¿©ÁÜ
+        } // ìˆ«ìžê°€ 10ë³´ë‹¤ ìž‘ì„ ê²½ìš° ì•žì— 0ì„ ë¶™ì—¬ì¤Œ
         return i;
       }
     </script>
   </head>
   <body onload="startTime()">
-    <!-- »óÅÂ¹Ù -->
+    <!-- ìƒíƒœë°” -->
     <div class="status-bar">
       <!-- .status-bar-->
       <div class="status-bar__column">
         <!-- .status-bar__column*2 -->
         <div id="clock" class="status-bar__clock"></div>
         <!-- span.status-bar__colck -->
-        <!-- ¾ÆÀÌÄÜµé -->
+        <!-- ì•„ì´ì½˜ë“¤ -->
         <i class="fas fa-clock"></i>
         <!-- i.fas.fa-clock -->
         <i class="fas fa-volume-mute"></i>
@@ -45,12 +45,12 @@
       <div class="status-bar__column"></div>
     </div>
 
-    <!-- Header Å¸ÀÌÆ² -->
+    <!-- Header íƒ€ì´í‹€ -->
     <header class="header">
       <div class="header__header-column">
         <h1 class="header__title">Friends</h1>
       </div>
-      <!-- Header ¾ÆÀÌÄÜ -->
+      <!-- Header ì•„ì´ì½˜ -->
       <div class="header__header-column">
         <span class="header__icon">
           <i class="fas fa-search"></i>      
@@ -59,15 +59,16 @@
         </span>
       </div>
     </header>
+    
 
     <main class="friends">
-       <!-- ³» ÇÁ·ÎÇÊ 
-      lg´Â large¸¦ ÀÇ¹Ì(ÀÌ¹ÌÁö Å©±â)
-      html³»¿¡¼­ header´Â ¿©·¯ ¹ø »ç¿ëÇØµµ »ó°ü ¾øÀ½-->
+       <!-- ë‚´ í”„ë¡œí•„ 
+      lgëŠ” largeë¥¼ ì˜ë¯¸(ì´ë¯¸ì§€ í¬ê¸°)
+      htmlë‚´ì—ì„œ headerëŠ” ì—¬ëŸ¬ ë²ˆ ì‚¬ìš©í•´ë„ ìƒê´€ ì—†ìŒ-->
       <header class="friends__header">
         <div class="friends__friend friend firend--lg">
-          <!-- columnÀ¸·Î 2°³·Î ³ª´® 
-          ÀÌ¸§, »óÅÂ¸Þ½ÃÁö¿Í ³ë·¡Àç»ýÀ¸·Î-->
+          <!-- columnìœ¼ë¡œ 2ê°œë¡œ ë‚˜ëˆ” 
+          ì´ë¦„, ìƒíƒœë©”ì‹œì§€ì™€ ë…¸ëž˜ìž¬ìƒìœ¼ë¡œ-->
           <div class="friend__column">
             <img src="image/avatar.jpg" class="g-avatar friend__avatar">
             <div class="friend__content">
@@ -81,12 +82,12 @@
           </div>         
         </div>
       </header>
-      <!-- ÇÃ·¯½º Ä£±¸ (¹è³ÊÃ³·³ »ç¿ëÇÒ °Å¶ó¼­ div³ª spanÀÌ ¾Æ´Ñ h5·Î)-->
+      <!-- í”ŒëŸ¬ìŠ¤ ì¹œêµ¬ (ë°°ë„ˆì²˜ëŸ¼ ì‚¬ìš©í•  ê±°ë¼ì„œ divë‚˜ spanì´ ì•„ë‹Œ h5ë¡œ)-->
      <div class="friends__plus-friend">
        <h5 class="friends__title">Plus friend</h5>
        <div class="friends__friend friend firend">
-         <!-- columnÀ¸·Î 2°³·Î ³ª´® 
-          ÀÌ¸§, »óÅÂ¸Þ½ÃÁö¿Í ³ë·¡Àç»ýÀ¸·Î-->
+         <!-- columnìœ¼ë¡œ 2ê°œë¡œ ë‚˜ëˆ” 
+          ì´ë¦„, ìƒíƒœë©”ì‹œì§€ì™€ ë…¸ëž˜ìž¬ìƒìœ¼ë¡œ-->
          <div class="friend__column">
           <img src="image/avatar.jpg" class="g-avatar friend__avatar">
           <div class="friend__content">
@@ -98,13 +99,13 @@
       </div>
      </div>
 
-     <!-- Ä£±¸ ¸ñ·Ï -->
+     <!-- ì¹œêµ¬ ëª©ë¡ -->
       <ul class="friends__list">
         <h5 class="friends__title">Friends 14</h5>
-        <!-- ³» ÇÁ·ÎÇÊ°ú ´Ù¸£°Ô li·Î ¼±¾ðÇÔ -->
+        <!-- ë‚´ í”„ë¡œí•„ê³¼ ë‹¤ë¥´ê²Œ lië¡œ ì„ ì–¸í•¨ -->
         <li class="friends__friend friend firend">
-          <!-- columnÀ¸·Î 2°³·Î ³ª´® 
-          ÀÌ¸§, »óÅÂ¸Þ½ÃÁö¿Í ³ë·¡Àç»ýÀ¸·Î-->
+          <!-- columnìœ¼ë¡œ 2ê°œë¡œ ë‚˜ëˆ” 
+          ì´ë¦„, ìƒíƒœë©”ì‹œì§€ì™€ ë…¸ëž˜ìž¬ìƒìœ¼ë¡œ-->
           <div class="friend__column">
             <img src="image/avatar.jpg" class="g-avatar friend__avatar">
             <div class="friend__content">
@@ -116,7 +117,7 @@
             </span>
             </div>
           </div>
-          <!-- ³ë·¡Àç»ý column -->
+          <!-- ë…¸ëž˜ìž¬ìƒ column -->
           <div class="friend__column">
             <div class="friend__now-listening">
               <span>
@@ -130,7 +131,7 @@
       </ul>
     </main>
 
-    <!-- ³×ºñ°ÔÀÌ¼Ç ¹Ù -->
+    <!-- ë„¤ë¹„ê²Œì´ì…˜ ë°” -->
     <nav class="nav">
       <ul class="nav__list">
         <!-- li.nav__list-item*4>a.nav__list-link -->
