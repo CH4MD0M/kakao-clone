@@ -1,70 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width= , initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script src="https://kit.fontawesome.com/beaa09218d.js"></script>
-    <title>Settings | Kakao Clone</title>
-</head>
+    <title>Chats | Kakao Clone</title>
+    <script>
+      function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
 
-<body>
+        m = checkTime(m);
+
+        document.getElementById("clock").innerHTML = h + ":" + m;
+        var t = setTimeout(startTime, 500);
+      }
+      function checkTime(i) {
+        if (i < 10) {
+          i = "0" + i;
+        } // 숫자가 10보다 작을 경우 앞에 0을 붙여줌
+        return i;
+      }
+    </script>
+  </head>
+  <body onload="startTime()">
+    <!-- .status-bar-->
+    <!-- 상태바 -->
     <div class="status-bar">
-        <div class="status-bar__column">
-            <span class="status-bar__clock">
-                13:54
-            </span>
-        </div>
-        <div class="status-bar__column">
-            <i class="fas fa-clock"></i>
-            <i class="fas fa-volume-mute"></i>
-            <i class="fas fa-wifi"></i>
-            <span class=status-bar__battery-level">100% </span>
-            <i class="fas fa-battery-full"></i>
+      <!-- .status-bar__column*2 -->
+      <!-- 시계 column -->
+      <div class="status-bar__column">
+        <!-- span.status-bar__colck -->
+        <div id="clock" class="status-bar__clock"></div>
+      </div>
 
-        </div>
+      <!-- 상태바 아이콘 -->
+      <div class="status-bar__column">
+        <!-- i.fas.fa-clock -->
+        <i class="fas fa-clock"></i>
+        <!-- i.fas.fa-volume-mute -->
+        <i class="fas fa-volume-mute"></i>
+        <!-- i.fas.fa-wifi -->
+        <i class="fas fa-wifi"></i>
+        <!-- 배터리 용량 -->
+        <span class="status-bar__battery">100%</span>
+        <!-- i.fas.fa-battery-full -->
+        <i class="fas fa-battery-full"></i>
+      </div>
     </div>
-    <header class="header">
-        <div class="header__hearder-column">
-            <div class="header__back-btn">
-                <a href="more.html">
-                    <i class="fas fa-arrow-left fa-2x"></i>
-                </a>
-            </div>
-            <h1 class="header__title">Settings</h1>
-        </div>
-        <div class="header__hearder-column">
-            <span class="header__icon">
-                <i class="fas fa-search"></i>
-            </span>
-        </div>
-    </header>
-    <main class="settings">
-        <section class="settings__sections">
-            <ul class="settings__list">
-                <li class="settings__setting">
-                    <span class="settigs__icon">
-                        <i class="fas fa-lock"></i>
-                    </span>
-                    
-                    <span class="settings__title">Privacy</span>
-                </li>
-                <li class="settings__setting">
-                    <span class="settigs__icon">
-                        <i class="far fa-bell"></i>
-                    </span>
-                    <span class="settings__title">Notifications</span>
-                </li>
-                <li class="settings__setting">
-                    <span class="settigs__icon">
-                        <i class="far fa-user"></i>
-                    </span>
-                    <span class="settings__title">Friends</span>
-                </li>
-            </ul>
-        </section>
-    </main>
-</body>
 
+    <header class="header">
+      <!-- .header__header-column*2 -->
+      <!-- 뒤로가기와 타이틀 column -->
+      <div class="header__hearder-column">
+        <!-- 뒤로가기 -->
+        <div class="header__back-btn">
+          <a href="more.html">
+            <i class="fas fa-arrow-left fa-2x"></i>
+          </a>
+        </div>
+        <!-- 타이틀 -->
+        <h1 class="header__title">Settings</h1>
+      </div>
+
+      <!-- search 아이콘 column-->
+      <div class="header__hearder-column">
+        <span class="header__icon">
+          <i class="fas fa-search"></i>
+        </span>
+      </div>
+    </header>
+
+    <main class="settings">
+      <section class="settings__sections">
+        <ul class="settings__list">
+          <!-- privacy 아이콘 -->
+          <li class="settings__setting">
+            <span class="settigs__icon">
+              <i class="fas fa-lock"></i>
+            </span>
+            <span class="settings__title">
+              Privacy
+            </span>
+          </li>
+
+          <!-- Notificatios 아이콘 -->
+          <li class="settings__setting">
+            <span class="settigs__icon">
+              <i class="far fa-bell"></i>
+            </span>
+            <span class="settings__title">
+              Notifications
+            </span>
+          </li>
+
+          <!-- Friends 아이콘 -->
+          <li class="settings__setting">
+            <span class="settigs__icon">
+              <i class="far fa-user"></i>
+            </span>
+            <span class="settings__title">
+              Friends
+            </span>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
 </html>

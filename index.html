@@ -26,23 +26,31 @@
     </script>
   </head>
   <body onload="startTime()">
+    <!-- .status-bar-->
+    <!-- 상태바 -->
     <div class="status-bar">
-      <!-- .status-bar-->
+      <!-- .status-bar__column*2 -->
+      <!-- 시계 column -->
       <div class="status-bar__column">
-        <!-- .status-bar__column*2 -->
-        <div id="clock" class="status-bar__clock"></div>
         <!-- span.status-bar__colck -->
+        <div id="clock" class="status-bar__clock"></div>
+      </div>
 
-        <i class="fas fa-clock"></i>
+      <!-- 상태바 아이콘 -->
+      <div class="status-bar__column">
         <!-- i.fas.fa-clock -->
-        <i class="fas fa-volume-mute"></i>
+        <i class="fas fa-clock"></i>
         <!-- i.fas.fa-volume-mute -->
+        <i class="fas fa-volume-mute"></i>
+        <!-- i.fas.fa-wifi -->
         <i class="fas fa-wifi"></i>
+        <!-- 배터리 용량 -->
         <span class="status-bar__battery">100%</span>
+        <!-- i.fas.fa-battery-full -->
         <i class="fas fa-battery-full"></i>
       </div>
-      <div class="status-bar__column"></div>
     </div>
+
     <header class="header">
       <div class="header__header-column">
         <h1 class="header__title">Chats</h1>
@@ -51,10 +59,10 @@
         <span class="header__icon">
           <i class="fas fa-search"></i>
         </span>
+        <!-- fas is solid(full of color)
+             far is regular(outline) -->
         <span class="header__icon">
           <i class="far fa-comment"></i>
-          <!-- fas is solid(full of color)
-               far is regular(outline) -->
         </span>
         <span class="header__icon">
           <i class="fas fa-cog"></i>
@@ -65,29 +73,32 @@
     <main class="chats">
       <!-- 채팅 리스트 -->
       <ul class="chats__list">
-        <!-- 채팅창 한줄 -->
+        <!-- 채팅리스트 한줄 -->
         <li class="chats__chat chat">
-          <!-- 사진, 이름, 내용 -->
-          <div class="chat__column">
-            <!-- 사진 -->
-            <!-- global avatar로 지정
-            기본적인 설정으로 사용할 때 
-            여기에서는 이미지 부분의 크기 때문에 사용(다른 곳에서도 대체로 쓰임) -->
-            <img class="chat__avatar g-avatar" src="image/avatar.jpg" />
-            <!-- 이름, 내용을 content로 묶음 -->
-            <div class="chat__content">
-              <span class="user__name">Lynn </span>
-              <span class="char__preview">Going Home </span>
+          <a href="chat.html">
+            <!-- 2개의 column으로 나눔
+             (이미지, 이름, 내용) // 날짜(timestamp) -->
+            <div class="chat__column">
+              <!-- 이미지 -->
+              <!-- global avatar로 지정
+               기본적인 css(디자인)으로 설정할 때 global로 해주면 관리하기 편함.
+               이 부분에서도 대체로 쓰이는 이미지 크기이기 때문에 사용함. -->
+              <img class="chat__avatar g-avatar" src="image/avatar.jpg" />
+              <!-- 이름, 내용 -->
+              <div class="chat__content">
+                <span class="user__name">Lynn </span>
+                <span class="char__preview">Going Home </span>
+              </div>
             </div>
-          </div>
-          <!-- 날짜 -->
-          <div class="chat__column">
-            <span class="chat__timestamp">Yesterday</span>
-          </div>
+            <!-- 날짜(timestamp) -->
+            <div class="chat__column">
+              <span class="chat__timestamp">Yesterday</span>
+            </div>
+          </a>
         </li>
       </ul>
     </main>
-    <!-- 네비게이션바 (하단메뉴) -->
+    <!-- 네비게이션바(하단메뉴) -->
     <nav class="nav">
       <ul class="nav__list">
         <!-- li.nav__list-item*4>a.nav__list-link -->
@@ -98,7 +109,7 @@
         </li>
         <li class="nav__list-item">
           <a href="index.html" class="nav__list-link">
-            <!-- 다른 파일에서는 solid가 아닌 regular로 설정 -->
+            <!-- index.html을 제외한 나머지 파일에서는 solid가 아닌 regular -->
             <i class="fas fa-comment"></i>
           </a>
         </li>

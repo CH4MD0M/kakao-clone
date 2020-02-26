@@ -26,44 +26,55 @@
     </script>
   </head>
   <body onload="startTime()">
-    <div class="status-bar">
-      <!-- .status-bar-->
+   <!-- .status-bar-->
+     <!-- 상태바 -->
+     <div class="status-bar">
+      <!-- .status-bar__column*2 -->
+      <!-- 시계 column -->
       <div class="status-bar__column">
-        <!-- .status-bar__column*2 -->
-        <div id="clock" class="status-bar__clock"></div>
         <!-- span.status-bar__colck -->
+        <div id="clock" class="status-bar__clock"></div>  
+      </div>
 
-        <i class="fas fa-clock"></i>
+      <!-- 상태바 아이콘 -->
+      <div class="status-bar__column">
         <!-- i.fas.fa-clock -->
-        <i class="fas fa-volume-mute"></i>
+        <i class="fas fa-clock"></i>
         <!-- i.fas.fa-volume-mute -->
+        <i class="fas fa-volume-mute"></i>
+        <!-- i.fas.fa-wifi -->
         <i class="fas fa-wifi"></i>
+        <!-- 배터리 용량 -->
         <span class="status-bar__battery">100%</span>
+        <!-- i.fas.fa-battery-full -->
         <i class="fas fa-battery-full"></i>
       </div>
-      <div class="status-bar__column"></div>
     </div>
+    <!-- 헤더 -->
     <header class="header">
+      <!-- 타이틀 column -->
       <div class="header__header-column">
         <h1 class="header__title">Find</h1>
       </div>
+      <!-- search, setting 아이콘 -->
       <div class="header__header-column">
+        <!-- span.header__icon*2 -->
+        <!-- 아이콘 배치를 span태그를 사용함 -->
         <span class="header__icon">
           <i class="fas fa-search"></i>
-        
           <!-- fas is solid(full of color)
                far is regular(outline) -->
-      
         <span class="header__icon">
           <i class="fas fa-cog"></i>
         </span>
       </div>
     </header>
+
     <!-- main -->
     <main class="find">
-      <!-- 아이콘 부분 -->    
+      <!-- 아이콘 -->    
       <header class="find__header">
-        <!-- qrcode, contacs... 아이콘 부분 -->
+        <!-- qrcode, contacs... 아이콘 -->
         <ul class="find__header-list">
           <!-- qrcode -->
           <li class="find__header-btn header-btn">
@@ -109,15 +120,17 @@
         <h5 class="find__title">
           Recommended Friends
         </h5>
-        <!-- 추천 친구 목록 
+        <!-- 추천 친구 목록
         Friends.html에서 friend를 사용했기 때문에
         find-friend를 추가-->
         <li class="find__friend friend firend">
-          <!-- column으로 2개로 나눔 
-          이름, 상태메시지와 노래재생으로-->
+          <!-- 2개의 column으로 나눔. 
+          이미지, 이름 // 친구 추가버튼-->
+          <!-- 이미지 , 이름 column -->
           <div class="friend__column">
+            <!-- 이미지 -->
             <img src="image/avatar.jpg" class="g-avatar friend__avatar">
-            <!-- 프로필 사진, 이름 -->
+            <!-- 이름 -->
             <div class="friend__content">
               <span class="friend__name">
                 Roh Ki Hoon
@@ -135,7 +148,7 @@
 
       </ul>
     </main>
-   <!-- 네비게이션바 (하단메뉴) -->
+   <!-- 네비게이션바(하단메뉴) -->
    <nav class="nav">
     <ul class="nav__list">
       <!-- li.nav__list-item*4>a.nav__list-link -->
@@ -146,8 +159,8 @@
       </li>
       <li class="nav__list-item">
         <a href="index.html" class="nav__list-link">
-          <!-- 다른 파일에서는 solid가 아닌 regular로 설정 -->
-          <i class="fas fa-comment"></i>
+          <!-- index.html을 제외한 나머지 파일에서는 solid가 아닌 regular -->
+          <i class="far fa-comment"></i>
         </a>
       </li>
       <li class="nav__list-item">
