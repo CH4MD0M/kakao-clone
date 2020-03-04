@@ -1,6 +1,8 @@
 .status-bar {
   /* 상태바에 있는 column들을 가로로 정렬해줌 */
   display: flex;
+  position: fixed;
+  width: 100%;
   justify-content: space-between;
   margin-bottom: 30px;
   color: #656565;
