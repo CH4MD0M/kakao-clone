@@ -1,0 +1,17 @@
+.status-bar {
+  /* 상태바에 있는 column들을 가로로 정렬해줌 */
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  color: #656565;
+}
+
+/* 상태바 아이콘 */
+.status-bar i {
+  font-size: 14px;
+}
+
+/* 배터리 %표시에 약간의 공간을 삽입 */
+.status-bar .status-bar__battery {
+  margin-left: 5px;
+}
