@@ -7,6 +7,8 @@ nomalize.css : 브라우저의 style을 따르고 있지만 기준을 만들어�
 @import "status-bar.css";
 @import "header.css";
 @import "nav-bar.css";
+@import "friend.css";
+@import "chat.css";
 
 * {
   box-sizing: border-box;
@@ -22,5 +24,8 @@ body {
 }
 
 a {
+  /* 부모의 색상을 받아오는 것 */
   color: inherit;
+  /* 텍스트에 줄을 그을때 사용*/
+  text-decoration: none;
 }

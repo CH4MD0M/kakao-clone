@@ -13,11 +13,13 @@ width를 설정해야함.
 }
 
 .nav .nav__list {
+  /* 네비게이션바 아이콘 정렬 */
   display: flex;
   justify-content: space-between;
 }
 
 .nav i {
+  /* 네비게이션바 아이콘 크기 */
   font-size: 20px;
 }
 
@@ -26,6 +28,7 @@ width를 설정해야함.
 }
 
 .nav .nav__badge {
+  /* 메시지 알림 갯수 표시 */
   /*
     absolute를 사용하기 위해
     부모에 relative로 설정
@@ -42,4 +45,5 @@ width를 설정해야함.
   justify-content: center;
   align-items: center;
   border-radius: 50px;
+  /* 사각형 -> 원 */
 }
