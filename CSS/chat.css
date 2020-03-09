@@ -1,5 +1,60 @@
-.chat {
+.chats-body {
+  /* 채팅 배경을 꽉차게 만듦 */
+  padding-left: 0;
+  padding-right: 0;
 }
-.chat .g-avatar {
-  width: 70px;
+.chats-body .header,
+.chats-body .status-bar {
+  /* 배경을 꽉 차게 만들면서 좁아진
+     header와 status-bar를 원래 크기로 늘림 */
+  padding: 0 20px;
+}
+.chat {
+  /* 채팅창 배경 */
+  background-image: url("../image/triangle-mosaic.png");
+  min-height: 100vh;
+  /* viewport height 
+    .chat 클래스가 적용된 div에  100%의 높이를 주는것
+    *******내용 공부 필요*******
+    */
+}
+
+.chat__write {
+  /* 채팅 입력 부분 */
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 40px;
+  padding: 0 20px;
+  bottom: 50px;
+  width: 80%;
+  /* ------------------------- */
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  /* 가운데 정렬 */
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  /* box-shadow: "수평" "수직" "Blur값" "색"; */
+}
+
+.chat__write i {
+  /* 채팅 입력부분 아이콘 크기 */
+  font-size: 22px;
+}
+
+.chat__write-column:nth-child(2) {
+  width: 80%;
+}
+
+.chat__write-column input {
+  padding: 20px 10px;
+  width: 100%;
+  border: none;
+  font-size: 14px;
+}
+
+.chat__write-column input:focus {
+  outline: none;
 }
