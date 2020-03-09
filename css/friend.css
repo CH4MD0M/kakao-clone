@@ -1,0 +1,80 @@
+.friend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.friend .friend__avatar {
+  /* 기본적인 이미지 크기는 50px */
+  width: 50px;
+  border-radius: 38%;
+  /* 이미지와 내용 간격 */
+  margin-right: 15px;
+}
+
+.friend__avatar.g-avatar {
+  /* 클래스 이름을 띄어쓰기 하면 .friend_avatar 안에 있는 .g-avatar에 적용
+   클래스 이름을 붙이면  .friend__avatar와 .g-avatar를 둘다 가진 element에 적용*/
+
+  width: 70px;
+}
+
+.friend__avatar.m-avatar {
+  /* index.html의 채팅창 이미지 */
+  width: 60px;
+}
+
+.friend .friend__column {
+  /* 이미지와 내용 가로 정렬 */
+  display: flex;
+  align-items: center;
+}
+
+.friend__content .friend__name {
+  /* 이름과 내용 세로 정렬 */
+  display: block;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.friend__content .friend__status,
+.friend__content .friend__bottom-text {
+  /* and의 의미로 ,를 사용함 */
+  opacity: 0.6;
+}
+
+.friend__content .friend__bottom-text {
+  font-size: 14px;
+}
+
+.friend__content .friend__status,
+.friend .chat__timestamp {
+  font-size: 12px;
+}
+
+.friend .friend__now-listening {
+  /* 노래 테두리 */
+  padding: 5px 10px;
+  border-radius: 15px;
+  border: 1px solid #52e084;
+  font-size: 14px;
+}
+
+.friend .friend__add-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  padding: 10px 15px;
+}
+
+.friend__now-listening span {
+  /* 노래제목 폰트크기 */
+  opacity: 0.6;
+}
+
+.friend__now-listening i {
+  /* 노래재생 아이콘 크기 */
+  font-size: 12px;
+}
