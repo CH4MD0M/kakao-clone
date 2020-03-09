@@ -12,6 +12,7 @@ nomalize.css : 브라우저의 style을 따르고 있지만 기준을 만들어�
 @import "chat.css";
 @import "find.css";
 @import "more.css";
+@import "settings.css";
 
 * {
   box-sizing: border-box;
