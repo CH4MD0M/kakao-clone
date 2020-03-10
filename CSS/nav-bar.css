@@ -10,6 +10,7 @@ width를 설정해야함.
   left: 0px;
   bottom: 0px;
   border: 1px solid #f7f7f7;
+  box-sizing: border-box;
 }
 
 .nav .nav__list {
