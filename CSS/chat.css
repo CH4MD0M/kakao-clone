@@ -2,25 +2,30 @@
   /* 채팅 배경을 꽉차게 만듦 */
   padding-left: 0;
   padding-right: 0;
+  box-sizing: initial;
 }
 .chats-body .header,
 .chats-body .status-bar {
   /* 배경을 꽉 차게 만들면서 좁아진
      header와 status-bar를 원래 크기로 늘림 */
   padding: 0 20px;
+  width: 100%;
 }
-.chat {
+
+.chat-screen {
   /* 채팅창 배경 */
   background-image: url("../image/triangle-mosaic.png");
   min-height: 100vh;
-  /* viewport height 
+  /* vertical height 
     .chat 클래스가 적용된 div에  100%의 높이를 주는것
-    *******내용 공부 필요*******
+    vh
+    - 높이값의 100 분의 1
+    - 100vh는 최대 높이 값이나 그의 유사한 높이 값의 슬라이드를 제작할 때 사용
     */
 }
 
 .chat__write {
-  /* 채팅 입력 부분 */
+  /* 채팅 입력 부분 전체 column*/
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -37,14 +42,17 @@
   box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
     0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
   /* box-shadow: "수평" "수직" "Blur값" "색"; */
+  background-color: white;
 }
 
 .chat__write i {
-  /* 채팅 입력부분 아이콘 크기 */
+  /* 채팅 입력부분 > 아이콘 크기 */
   font-size: 22px;
 }
 
+/* 중요한 부분 넓이 넓혀주는 거 */
 .chat__write-column:nth-child(2) {
+  /* 채팅 입역부분 > input 부분 */
   width: 80%;
 }
 
@@ -57,4 +65,78 @@
 
 .chat__write-column input:focus {
   outline: none;
+}
+
+.chat-screen .chat__message {
+  border-top: 1px solid #f7f7f7;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 20px;
+  padding-top: 30px;
+}
+.chat__message .chat__timestamp {
+  background-color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px,
+    rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
+
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  width: 35%;
+  margin-bottom: 20px;
+}
+.message .message__content {
+  width: 80%;
+}
+.incoming-message {
+  align-self: flex-start;
+}
+
+.incoming-message img {
+  width: 30px;
+  border-radius: 15px;
+  margin-right: 15px;
+}
+.sent-message {
+  align-self: flex-end;
+}
+
+.message .message__bubble {
+  width: 200px;
+  display: block;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px,
+    rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+.incoming-message .message__author {
+  margin-bottom: 15px;
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.incoming-message .message__bubble {
+  border-top-left-radius: 0;
+  background-image: linear-gradient(to right, #2193b0, #6dd5ed);
+}
+
+.sent-message .message__bubble {
+  width: 100%;
+  border-bottom-right-radius: 0;
+  background-image: linear-gradient(to right, #02aab0, #00cdac);
 }

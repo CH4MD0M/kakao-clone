@@ -80,7 +80,7 @@
     </header>
     <!-- --------------------------------------------------------------- -->
     <!-- main -->
-    <main class="chat">
+    <main class="chat-screen">
       <ul class="chat__message">
         <!-- 채팅 타임스탬프 -->
         <span class="chat__timestamp">Friday, January 11, 2019</span>
@@ -93,25 +93,22 @@
             <!-- 이름 -->
             <span class="message__author">Best Friend</span>
             <!-- 내용 -->
-            <div class="message__bubble">
+            <span class="message__bubble">
               Congrats I love you!
-            </div>
+            </span>
           </div>
           <!-- 보낸시간 -->
-          <span class="message__timestamp"></span>
         </li>
 
         <!-- 보낸시간이 앞으로 오고
              보낸사람 이미지 이름 이 없음 -->
-        <li class="incoming-message message">
+        <li class="sent-message message">
           <!-- 보낸시간 -->
           <span class="message__timestamp"></span>
           <!-- 메세지 내용 (이름, 내용) -->
           <div class="message__content">
             <!-- 내용 -->
-            <div class="message__bubble">
-              Thank you see you soon!
-            </div>
+            <span class="message__bubble">Thank you see you soon!</span>
           </div>
         </li>
       </ul>
