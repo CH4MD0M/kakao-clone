@@ -1,4 +1,26 @@
+.head-wrapper {
+  position: fixed;
+  background-color: white;
+  top: 0;
+  width: 100%;
+  padding: 10px 0px;
+  border-bottom: 1px solid #f7f7f7;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  /* box-shadow: "수평" "수직" "Blur값" "색"; */
+}
+
 .chats-body {
+  /* 채팅창 배경 */
+  background-image: url("../image/triangle-mosaic.png");
+  min-height: 1000vh;
+  /* vertical height 
+     .chat 클래스가 적용된 div에  100%의 높이를 주는것
+     vh
+     - 높이값의 100 분의 1
+     - 100vh는 최대 높이 값이나 그의 유사한 높이 값의 슬라이드를 제작할 때 사용
+     */
+
   /* 채팅 배경을 꽉차게 만듦 */
   padding-left: 0;
   padding-right: 0;
@@ -12,42 +34,66 @@
   width: 100%;
 }
 
-.chat-screen {
-  /* 채팅창 배경 */
-  background-image: url("../image/triangle-mosaic.png");
-  min-height: 100vh;
-  /* vertical height 
-    .chat 클래스가 적용된 div에  100%의 높이를 주는것
-    vh
-    - 높이값의 100 분의 1
-    - 100vh는 최대 높이 값이나 그의 유사한 높이 값의 슬라이드를 제작할 때 사용
-    */
-}
-
-.chat__write {
+.chat__write--container {
   /* 채팅 입력 부분 전체 column*/
   position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 40px;
-  padding: 0 20px;
-  bottom: 50px;
-  width: 80%;
-  /* ------------------------- */
+  /* -------가운데 정렬-------- */
   margin: 0 auto;
   left: 0;
   right: 0;
-  /* 가운데 정렬 */
-  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
-    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
-  /* box-shadow: "수평" "수직" "Blur값" "색"; */
-  background-color: white;
+  /* ------------------------- */
+  bottom: 0px;
+  width: 100%;
+}
+.chat__icon-left {
+  position: absolute;
+  left: 10px;
+}
+.chat__icon-right {
+  position: absolute;
+  right: 10px;
+}
+.chat__icon {
+  /* 채팅 입력부분 > 아이콘 크기 */
+  font-size: 20px;
+  transition: opacity 0.3s ease-in-out;
 }
 
-.chat__write i {
-  /* 채팅 입력부분 > 아이콘 크기 */
-  font-size: 22px;
+.chat__write {
+  /* 채팅 입력 부분 애니메이션 */
+  bottom: 0px;
+  width: 100%;
+  border-radius: 0;
+  padding: 20px 60px;
+  margin: 0 auto;
+  width: 100%;
+  border: none;
+  font-size: 14px;
+  transition: width 0.5s ease-in-out, border-radius 0.5s ease-in-out,
+    transform 0.5s ease-in-out;
+}
+.chat__write:focus {
+  outline: none;
+  width: 60%;
+
+  transform: translateY(-40px);
+  border-radius: 40px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px,
+    rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
+}
+.chat__write:focus ~ .chat__icon {
+  /*
+  ***************************************** 
+  동위 선택자 
+  .chat__write 뒤에 있는 .chat__icon, 선택
+  css에서 상위에 있는 것 (전에 있는 것은) 선택 할 수 없기 떄문에
+  입력창을 먼저 만들고 아이콘을 뒤에 선언함.
+  */
+  opacity: 0;
 }
 
 /* 중요한 부분 넓이 넓혀주는 거 */
@@ -56,25 +102,12 @@
   width: 80%;
 }
 
-.chat__write-column input {
-  padding: 20px 10px;
-  width: 100%;
-  border: none;
-  font-size: 14px;
-}
-
-.chat__write-column input:focus {
-  outline: none;
-}
-
 .chat-screen .chat__message {
-  border-top: 1px solid #f7f7f7;
-  padding-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0px 20px;
-  padding-top: 30px;
+  padding-top: 130px;
 }
 .chat__message .chat__timestamp {
   background-color: white;
