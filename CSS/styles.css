@@ -31,3 +31,18 @@ a {
   /* 텍스트에 줄을 그을때 사용*/
   text-decoration: none;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+main {
+  animation: fadeIn 0.5s ease-in-out;
+}

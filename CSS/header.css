@@ -27,7 +27,6 @@ span은 inline 형태이다
 .header .header__header-column {
   display: flex;
   align-items: center;
-  margin-right: 40px;
 }
 
 .header .header__back-btn {
