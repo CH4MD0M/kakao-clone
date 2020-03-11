@@ -28,56 +28,58 @@
   </head>
   <!-- --------------------------------------------------------------- -->
   <body onload="startTime()" class="chats-body">
-    <!-- .status-bar-->
-    <!-- 상태바 -->
-    <div class="status-bar">
-      <!-- .status-bar__column*2 -->
-      <!-- 시계 column -->
-      <div class="status-bar__column">
-        <!-- span.status-bar__colck -->
-        <div id="clock" class="status-bar__clock"></div>
-      </div>
-
-      <!-- 상태바 아이콘 -->
-      <div class="status-bar__column">
-        <!-- i.fas.fa-clock -->
-        <i class="fas fa-clock"></i>
-        <!-- i.fas.fa-volume-mute -->
-        <i class="fas fa-volume-mute"></i>
-        <!-- i.fas.fa-wifi -->
-        <i class="fas fa-wifi"></i>
-        <!-- 배터리 용량 -->
-        <span class="status-bar__battery">100%</span>
-        <!-- i.fas.fa-battery-full -->
-        <i class="fas fa-battery-full"></i>
-      </div>
-    </div>
-    <!-- --------------------------------------------------------------- -->
-    <header class="header">
-      <!-- .header__header-column*2 -->
-      <!-- 뒤로가기 아이콘, 친구이름 column -->
-      <div class="header__header-column">
-        <!-- 뒤로가기 아이콘 -->
-        <div class="header__back-btn">
-          <a href="index.html">
-            <i class="fas fa-arrow-left"></i>
-          </a>
+    <div class="head-wrapper">
+      <!-- .status-bar-->
+      <!-- 상태바 -->
+      <div class="status-bar">
+        <!-- .status-bar__column*2 -->
+        <!-- 시계 column -->
+        <div class="status-bar__column">
+          <!-- span.status-bar__colck -->
+          <div id="clock" class="status-bar__clock"></div>
         </div>
 
-        <!-- 친구 이름 -->
-        <h1 class="header__title">Best Friend</h1>
+        <!-- 상태바 아이콘 -->
+        <div class="status-bar__column">
+          <!-- i.fas.fa-clock -->
+          <i class="fas fa-clock"></i>s
+          <!-- i.fas.fa-volume-mute -->
+          <i class="fas fa-volume-mute"></i>
+          <!-- i.fas.fa-wifi -->
+          <i class="fas fa-wifi"></i>
+          <!-- 배터리 용량 -->
+          <span class="status-bar__battery">100%</span>
+          <!-- i.fas.fa-battery-full -->
+          <i class="fas fa-battery-full"></i>
+        </div>
       </div>
       <!-- --------------------------------------------------------------- -->
-      <!-- 검색, 메뉴 아이콘 column -->
-      <div class="header__header-column">
-        <span class="header__icon">
-          <i class="fas fa-search"></i>
-        </span>
-        <span class="header__icon">
-          <i class="fas fa-bars"></i>
-        </span>
-      </div>
-    </header>
+      <header class="header">
+        <!-- .header__header-column*2 -->
+        <!-- 뒤로가기 아이콘, 친구이름 column -->
+        <div class="header__header-column">
+          <!-- 뒤로가기 아이콘 -->
+          <div class="header__back-btn">
+            <a href="index.html">
+              <i class="fas fa-arrow-left"></i>
+            </a>
+          </div>
+
+          <!-- 친구 이름 -->
+          <h1 class="header__title">Best Friend</h1>
+        </div>
+        <!-- --------------------------------------------------------------- -->
+        <!-- 검색, 메뉴 아이콘 column -->
+        <div class="header__header-column">
+          <span class="header__icon">
+            <i class="fas fa-search"></i>
+          </span>
+          <span class="header__icon">
+            <i class="fas fa-bars"></i>
+          </span>
+        </div>
+      </header>
+    </div>
     <!-- --------------------------------------------------------------- -->
     <!-- main -->
     <main class="chat-screen">
@@ -114,24 +116,21 @@
       </ul>
     </main>
     <!-- --------------------------------------------------------------- -->
-    <!-- 채팅 입력 column -->
-    <div class="chat__write">
-      <!-- .chat__write-column*3 
-          3개의  column으로 이루어짐-->
+    <!-- 채팅 입력 container -->
+    <div class="chat__write--container">
+      <!-- 3개의  column으로 이루어짐-->
+      <input
+        class="chat__write"
+        type="text"
+        placeholder="Send message"
+        class="chat__write-input"
+      />
       <!-- +버튼 아이콘 column -->
-      <div class="chat__write-column">
+      <div class="chat__icon-left chat__icon">
         <i class="far fa-plus-square"></i>
       </div>
-      <!-- 채팅 입력 column -->
-      <div class="chat__write-column">
-        <input
-          type="text"
-          placeholder="Send message"
-          class="chat__write-input"
-        />
-      </div>
       <!-- 이모티콘, 음성 이모티콘 column -->
-      <div class="chat__write-column">
+      <div class="chat__icon-right chat__icon">
         <!-- 이모티콘 아이콘 -->
         <span class="chat__write-icon">
           <i class="far fa-smile-wink"></i>
